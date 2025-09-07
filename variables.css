@@ -1,0 +1,228 @@
+:root {
+    /*color*/
+    
+    /*primary*/
+    --color-primary: hsla(330, 65%, 52%, 1);
+    --color-primary-hover : hsla(330, 72%, 40%, 1);
+    --color-primary-active: hsla(330, 72%, 30%, 1);
+    --color-on-primary: hsla(0, 0%, 100%, 1);
+    --color-primary-subtle: hsla(330, 77%, 95%, 1);
+    --color-primary-subtle-hover: hsla(331, 76%, 92%, 1);
+    --color-primary-subtle-active: hsla(331, 76%, 90%, 1);
+    --color-on-primary-subtle: hsla(331, 76%, 12%, 1);
+    --color-primary-subtle-var: hsla(330, 78%, 80%, 1);
+
+    /*secondary*/
+    --color-secondary: hsla(245, 70%, 64%, 1);
+    --color-secondary-hover: hsla(245, 60%, 56%, 1);
+    --color-secondary-active: hsla(245, 60%, 45%, 1);
+    --color-on-secondary: hsla(0, 0%, 100%, 1);
+    --color-secondary-subtle: hsla(244, 61%, 95%, 1);
+    --color-secondary-subtle-hover: hsla(244, 70%, 92%, 1);
+    --color-secondary-subtle-active: hsla(244, 70%, 90%, 1);
+    --color-on-secondary-subtle: hsla(244, 61%, 12%, 1);
+    --color-secondary-subtle-var: hsla(244, 70%, 83%, 1);
+
+    /*tertiary*/
+    --color-tertiary: hsla(179, 60%, 37%, 1);
+    --color-tertiary-hover: hsla(179, 74%, 28%, 1);
+    --color-tertiary-active: hsla(179, 73%, 18%, 1);
+    --color-on-tertiary: hsla(0, 0%, 100%, 1);
+    --color-tertiary-subtle: hsla(180, 76%, 95%, 1);
+    --color-tertiary-subtle-hover: hsla(180, 76%, 92%, 1);
+    --color-tertiary-subtle-active: hsla(180, 76%, 90%, 1);
+    --color-on-tertiary-subtle: hsla(180, 73%, 12%, 1);
+    --color-tertiary-subtle-var: hsla(179, 66%, 80%, 1);
+
+    /*error*/
+    --color-error: hsla(354, 70%, 55%, 1);
+    --color-error-hover: hsla(354, 60%, 44%, 1);
+    --color-error-active: hsla(354, 60%, 30%, 1);
+    --color-on-error: hsla(0, 0%, 100%, 1);
+    --color-error-subtle: hsla(354, 90%, 93%, 1);
+    --color-error-subtle-hover: hsla(354, 90%, 95%, 1);
+    --color-error-subtle-active: hsla(354, 90%, 91%, 1);
+    --color-on-error-subtle: hsla(354, 60%, 44%, 1);
+
+    /*warning*/
+    --color-warning: hsla(28, 50%, 44%, 1);
+    --color-warning-hover: hsla(28, 50%, 41%, 1);
+    --color-warning-active: hsla(28, 59%, 26%, 1);
+    --color-on-warning: hsla(0, 0%, 100%, 1);
+    --color-warning-subtle: hsla(28, 70%, 95%, 1);
+    --color-warning-subtle-hover: hsla(29, 70%, 92%, 1);
+    --color-warning-subtle-active: hsla(28, 70%, 89%, 1);
+    --color-on-warning-subtle: hsla(28, 50%, 41%, 1);
+
+    /*success*/
+    --color-sucess: hsla(87, 50%, 45%, 1);
+    --color-sucess-hover: hsla(87, 45%, 34%, 1);
+    --color-sucess-active: hsla(87, 40%, 26%, 1);  
+    --color-on-sucess: hsla(0, 0%, 100%, 1);    
+    --color-sucess-subtle: hsla(87, 55%, 94%, 1);
+    --color-sucess-subtle-hover: hsla(87, 55%, 91%, 1);
+    --color-sucess-subtle-active: hsla(87, 55%, 88%, 1);
+    --color-on-sucess-subtle: hsla(87, 45%, 34%, 1);
+
+    /*base*/
+    --color-base: hsla(0, 0%, 100%, 1);
+    --color-base-hover: hsla(229, 22%, 90%, 1);
+    --color-base-active: hsla(228, 20%, 80%, 1);
+    --color-on-base: hsla(228, 20%, 19%, 1);
+    --color-base-subtle: hsla(228, 20%, 30%, 1);
+    --color-base-subtle-hover: hsla(228, 20%, 40%, 1);
+    --color-base-subtle-active: hsla(228, 20%, 50%, 1);
+    --color-on-base-subtle: hsla(228, 20%, 50%, 1);
+
+    /*surface*/
+    --color-surface-dark: hsla(228, 20%, 19%, 1);
+    --color-surface-dark-var: hsla(228, 20%, 30%, 1);
+    --color-surface-light: hsla(229, 22%, 99%, 1);
+    --color-on-surface-dark: hsla(0, 0%, 100%, 1);
+    --color-on-surface-light: hsla(229, 22%, 10%, 1);
+    --color-on-surface-dark-subtle: hsla(229, 22%, 90%, 1);
+    --color-on-surface-light-subtle: hsla(228, 20%, 50%, 1);
+    --color-stroke-gray: hsla(228, 20%, 80%, 1);
+    --color-stroke-white: hsla(0, 0%, 100%, 1);
+
+    /*opacity*/
+
+    /*neutral*/
+    --color-opacity-neutral-0: hsla(0, 0%, 0%, 0);
+    --color-opacity-neutral-5: hsla(0, 0%, 0%, 0.05);
+    --color-opacity-neutral-10: hsla(0, 0%, 0%, 0.1);
+    --color-opacity-neutral-15: hsla(0, 0%, 0%, 0.15);
+    --color-opacity-neutral-50: hsla(0, 0%, 0%, 0.5);
+
+    /*primary*/
+    --color-opacity-primary-20: hsla(330, 72%, 56%, 0.2);
+    --color-opacity-primary-40: hsla(330, 72%, 56%, 0.4);
+
+    /*secondary*/
+    --color-opacity-secondary-40: hsla(245, 60%, 56%, 0.4);
+
+    /*tertiary*/
+    --color-opacity-tertiary-40: hsla(179, 60%, 46%, 0.4);
+
+    /*error*/
+    --color-opacity-error-40: hsla(354, 70%, 55%, 0.4);
+    
+    /*warning*/
+    --color-opacity-warning-40: hsla(28, 60%, 53%, 0.4);
+
+    /*success*/
+    --color-opacity-success-40: hsla(87, 50%, 45%, 0.4);
+
+    /*base*/
+    --color-opacity-base-10: hsla(228, 20%, 50%, 0.1);
+    --color-opacity-base-25: hsla(228, 20%, 50%, 0.25);
+    --color-opacity-base-40: hsla(228, 20%, 50%, 0.4);
+
+    /*sizing*/
+
+    /*border radius*/
+    --border-radius-none: 0px;
+    --border-radius-xxs: 4px;
+    --border-radius-xs: 6px;
+    --border-radius-s: 8px;
+    --border-radius-m: 12px;
+    --border-radius-l: 16px;
+    --border-radius-xl: 20px;
+    --border-radius-xxl: 24px;
+    --border-radius-full: 1000px;
+
+    /*border-size*/
+    --border-none: 0px;
+    --border-s: 1px;
+    --border-m: 2px;
+
+    /*icon-size*/
+    --icon-size-xs: 12px;
+    --icon-size-s: 16px;
+    --icon-size-m: 20px;
+    --icon-size-l: 24px;
+    --icon-size-xl: 28px;
+
+    /*spacing*/
+
+    /*padding*/
+    --padding-none: 0px;
+    --padding-3xs: 1px;
+    --padding-2xs: 2px;
+    --padding-xs: 4px;
+    --padding-s: 6px;
+    --padding-m: 8px;
+    --padding-l: 12px;
+    --padding-xl: 16px;
+    --padding-2xl: 20px;
+    --padding-3xl: 32px;
+    --padding-4xl: 80px;
+    --padding-4xl-responsive: 64px;
+
+    /*margin*/
+    --margin-none: 0px;
+    --margin-2xs: 2px;
+    --margin-xs: 4px;
+    --margin-s: 6px;
+    --margin-m: 8px;
+    --margin-l:12px;
+    --margin-xl: 16px;
+    --margin-2xl: 20px;
+    --margin-3xl: 32px;
+    --margin-4xl: 80px;
+    --margin-4xl-responsive: 40px;
+    
+
+    /*gap*/
+    --gap-none: 0px;
+    --gap-2xs: 2px;
+    --gap-xs: 4px;
+    --gap-s: 6px;
+    --gap-m: 8px;
+    --gap-l: 12px;
+    --gap-xl: 16px;
+    --gap-2xl: 20px;
+    --gap-3xl: 32px;
+    --gap-4xl: 80px;
+    --gap-4xl-responsive: 40px;
+
+    /*typography*/
+
+    --font-family-base: 'Roboto', sans-serif;
+    --font-family-brand: 'Bellota Text', sans-serif;
+    --font-size-72: 4.5rem;
+    --font-size-60: 3.75rem;
+    --font-size-56: 3.5rem;
+    --font-size-48: 3rem;
+    --font-size-40: 2.5rem;
+    --font-size-36: 2.25rem;
+    --font-size-32: 2rem;
+    --font-size-28: 1.75rem;
+    --font-size-24: 1.5rem;
+    --font-size-22: 1.375rem;
+    --font-size-20: 1.25rem;
+    --font-size-18: 1.125rem;
+    --font-size-16: 1rem;
+    --font-size-14: 0.875rem;
+    --font-size-12: 0.75rem;
+
+    
+
+    /*shadows*/
+    --shadow-xs: 0px 1px 4px 0px rgba(25, 25, 25, 0.20);
+    --shadow-s: 0px 1px 6px 1px rgba(25, 25, 25, 0.15);
+    --shadow-m: 0px 1px 8px 2px rgba(25, 25, 25, 0.15);
+    --shadow-l: 0px 1px 10px 4px rgba(25, 25, 25, 0.10);
+    --shadow-xl: 0px 1px 12px 6px rgba(25, 25, 25, 0.10);
+
+    /*breackpoints*/
+    --xs: 575px; 
+    --s: 576px;
+    --m:768px;
+    --l: 992px; 
+    --xl:1200px;
+    --xxl: 1400px;
+}
+
+
+
