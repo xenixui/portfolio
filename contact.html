@@ -68,29 +68,29 @@
                     </a>
                 </div>
                 <div class="menu social" id="menu_social">
-                    <a href="https://www.linkedin.com/in/goldfisharts">
+                    <a href="https://www.linkedin.com/in/goldfisharts" target="_blank">
                         <span>Linkedin</span>
                         <span class="material-symbols-outlined">chevron_right</span>
                     </a>
-                    <a href="https://www.behance.net/kseniakonnova">
+                    <a href="https://www.behance.net/kseniakonnova" target="_blank">
                         <span>Behance</span>
                         <span class="material-symbols-outlined">chevron_right</span>
                     </a>
-                    <a href="https://github.com/xenixui">
+                    <a href="https://github.com/xenixui" target="_blank">
                         <span>GiHub</span>
                         <span class="material-symbols-outlined">chevron_right</span>
                     </a>
                 </div>
                 <div class="menu social desktop" id="social_desktop">
-                    <a href="https://www.linkedin.com/in/goldfisharts">
+                    <a href="https://www.linkedin.com/in/goldfisharts" target="_blank">
                         <span>Linkedin</span>
                         <span class="material-symbols-outlined">chevron_right</span>
                     </a>
-                    <a href="https://www.behance.net/kseniakonnova">
+                    <a href="https://www.behance.net/kseniakonnova" target="_blank">
                         <span>Behance</span>
                         <span class="material-symbols-outlined">chevron_right</span>
                     </a>
-                    <a href="https://github.com/xenixui">
+                    <a href="https://github.com/xenixui" target="_blank">
                         <span>GiHub</span>
                         <span class="material-symbols-outlined">chevron_right</span>
                     </a>
@@ -107,7 +107,7 @@
                 <button class="button base solid button icon desktop" id="menu_social_toggle">
                     <span class="material-symbols-outlined">link</span>
                 </button>
-                <a href="https://drive.google.com/file/d/1rk4WO2SvqhBrX5YUwNVemF5V2IdiT0Hv/view" class="button primary solid button icon desktop">
+                <a href="https://drive.google.com/file/d/1rk4WO2SvqhBrX5YUwNVemF5V2IdiT0Hv/view" target="_blank" class="button primary solid button icon desktop">
                     <span class="material-symbols-outlined">download</span>
                 </a>  
                 <button class="button base clear button icon desktop" id="menu_toggle">
@@ -124,7 +124,7 @@
                         <span class="centered">
                             <h3>Si quieres contar conmigo para tu próxima misión creativa, ¡hazme una señal!</h3>
                         </span>
-                        <form action="" class="form">
+                        <form action="" id="contact_form" class="form">
                             <div class="input_wrapper">
                                 <label for="name" class="label">
                                     <span class="input_label label medium">Nombre</span>
@@ -149,7 +149,7 @@
                                 </label>
                                 <textarea name="message" id="message" placeholder="Mensaje" class="input text area"></textarea>
                             </div>
-                            <button type="submit" class="button primary solid">
+                            <button type="submit" id="submit_btn" class="button primary solid">
                                 <span class="material-symbols-outlined">send</span>
                                 <span>Enviar</span>
                             </button>
@@ -164,31 +164,31 @@
                         </span>
                     </div>
                     <div class="content horizontal gap-2xl">
-                            <a href="https://www.linkedin.com/in/goldfisharts/" class="card horizontal stats" target="_blank">
-                                    <img src="svg/cards_in.svg" alt="">
-                                    <div class="card body">
-                                        <span class="body large">LinkedIn</span>
-                                    </div>
-                            </a>
-                            <a href="https://www.behance.net/kseniakonnova" class="card horizontal stats" target="_blank">
-                                    <img src="svg/cards_be.svg" alt="">
-                                    <div class="card body">
-                                        <span class="body large">Behance</span>
-                                    </div>
-                            </a>
-                            <a href="https://www.behance.net/kseniakonnova" class="card horizontal stats" target="_blank">
-                                    <img src="svg/cards_git.svg" alt="">
-                                    <div class="card body">
-                                        <span class="body large">GitHub</span>
-                                    </div>
-                            </a>
-                            <a href="mailto:kseniakonnova.ux@gmail.com" class="card horizontal stats" target="_blank">
-                                    <img src="svg/cards_mail.svg" alt="">
-                                    <div class="card body">
-                                        <span class="body large">Correo electónico</span>
-                                    </div>
-                            </a>
-                        </div>    
+                        <a href="https://www.linkedin.com/in/goldfisharts/" class="card horizontal stats" target="_blank">
+                                <img src="svg/cards_in.svg" alt="">
+                                <div class="card body">
+                                    <span class="body large">LinkedIn</span>
+                                </div>
+                        </a>
+                        <a href="https://www.behance.net/kseniakonnova" class="card horizontal stats" target="_blank">
+                                <img src="svg/cards_be.svg" alt="">
+                                <div class="card body">
+                                    <span class="body large">Behance</span>
+                                </div>
+                        </a>
+                        <a href="https://github.com/xenixui" class="card horizontal stats" target="_blank">
+                                <img src="svg/cards_git.svg" alt="">
+                                <div class="card body">
+                                    <span class="body large">GitHub</span>
+                                </div>
+                        </a>
+                        <a href="mailto:kseniakonnova.ux@gmail.com" class="card horizontal stats" target="_blank">
+                                <img src="svg/cards_mail.svg" alt="">
+                                <div class="card body">
+                                    <span class="body large">kseniakonnova.ux@gmail.com</span>
+                                </div>
+                        </a>
+                    </div>    
                 </section>
             </div>                      
         </main>
@@ -264,13 +264,49 @@
 
         });
         </script>   
-        <script><!-- Poner el link de la página actual en activo -->
+        <script>
             const currentPage = location.pathname.split("/").pop();
             document.querySelectorAll("nav a").forEach(link => {
             if (link.getAttribute("href") === currentPage) {
             link.classList.add("active");
             }
             });  
+        </script>
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+        emailjs.init("gh97sn76WV8g8oZRE");
+
+        const form = document.getElementById('contact_form');
+        const submitBtn = document.getElementById('submit_btn');
+
+        function checkFormValidity() {
+        const inputs = form.querySelectorAll('input[required], textarea[required]');
+        let allFilled = true;
+
+        inputs.forEach(input => {
+        if (!input.value.trim()) {
+            allFilled = false;
+        }
+        });
+
+        submitBtn.disabled = !allFilled;
+        }
+
+        form.addEventListener('input', checkFormValidity);
+        checkFormValidity();
+
+        form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        emailjs.sendForm('service_x570bjs', 'template_portfolio', this)
+        .then(function() {
+            alert('Mensaje enviado con éxito!');
+            form.reset();
+            checkFormValidity();
+        }, function(error) {
+        alert('Se ha producido un error: ' + JSON.stringify(error));
+        });
+        });
         </script>
     </body>
 </html>
