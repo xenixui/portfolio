@@ -466,6 +466,11 @@ nav .content {
     gap: var(--gap-m);
 }
 
+.content.horizontal.gap-m.left {
+    gap: var(--gap-m);
+    justify-content: start;
+}
+
 .content.horizontal.gap-xl {
     gap: var(--gap-xl);
 }
@@ -1940,7 +1945,7 @@ hr {
     }
 
 .card.vertical.mini {
-    max-width: 180px;
+    max-width: 160px;
 }
 
     span.left.quote {
