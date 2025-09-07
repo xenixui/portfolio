@@ -1864,7 +1864,8 @@ hr {
     }
 
     .content.vertical.gap-m.clients {
-        max-width: 140px;
+        width: 100%;
+        max-width: 180px;
     }
 
     .content.horizontal.gap-3xl.timeline.left {
@@ -1926,8 +1927,8 @@ hr {
     }
 
     .card.horizontal.clients {
-        width: auto;
-        max-width: 140px;
+        width: 100%;
+        max-width: 180px;
     }
 
     .card.vertical {
@@ -1944,9 +1945,9 @@ hr {
     max-width: none;
     }
 
-.card.vertical.mini {
-    max-width: 160px;
-}
+    .card.vertical.mini {
+        max-width: 160px;
+    }
 
     span.left.quote {
         width: 100%;
