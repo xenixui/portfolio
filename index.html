@@ -124,8 +124,8 @@
             </nav>
         </header>
         <main id="main">
-            <div class="section login" aria-label="Contenido principal">
-                <section class ="section content">
+            <div class="section index">
+                <section class ="section content" aria-label="Contenido principal">
                     <div class="info">
                         <img src="svg/foto.webp" alt="Foto Ksenia Konnova" class="foto">
                         <h1>Ksenia Konnova</h1>
@@ -173,8 +173,7 @@
                     </div>
                     <div class="info">
                         <h3 class="centered">¡Hola!</h3>
-                        <span class="centered">
-                            <p class="body large">
+                            <p class="body large centered">
                                 Me llamo Ksenia y soy <strong>diseñadora de productos digitales UX/UI</strong>, especializada en 
                                 <strong>diseño responsive</strong>, 
                                 <strong>sistemas de diseño (Design Systems)</strong>, 
@@ -184,7 +183,6 @@
                                 <span class="primary"><strong>9 años de experiencia</strong></span> previa en diseño gráfico y diseño 3D, 
                                 lo que aporta una <strong>visión técnica y estética</strong> al desarrollo de productos digitales.
                             </p>
-                        </span>
                         <a href="about.html" class="button primary solid">
                             <span>Descubre mi viaje</span>
                         </a>
@@ -201,9 +199,9 @@
                 <section class="section content quote" aria-label="Sobre mi">
                         <div class="content horizontal gap m">
                             <img src="svg/comilla_l.svg" alt="Comillas">
-                            <span class="span left quote">
-                                <h5> ¡Me apasionan las interacciones y todo lo visual!  Cada proyecto para mí es un reto y me encanta construir pequeños universos que giran alrededor de mi usuario.</h5>
-                            </span>
+                            <div>
+                                <h5>¡Me apasionan las interacciones y todo lo visual!  Cada proyecto para mí es un reto y me encanta construir pequeños universos que giran alrededor de mi usuario.</h5>
+                            </div>
                             <img src="svg/comilla_r.svg" alt="Comillas">
                         </div>
                     </section>
@@ -360,7 +358,8 @@
                             <span class="material-symbols-outlined">chevron_right</span>
                         </button>
                     </div>    
-                </section>                   
+                </section>
+            </div>                       
                 <script><!-- Lottie hover -->
                     document.addEventListener("DOMContentLoaded", () => {
                     const lottieEl = document.getElementById("section_animation");

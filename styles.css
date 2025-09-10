@@ -135,7 +135,7 @@ body, html {
     width: 100%;
 }
 
-.section.login {
+.section.index {
     background-image: url(svg/bg_section.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -376,13 +376,18 @@ span.left {
     text-align: left;
 }
 
-.section.content.quote span.left {
+.section.content.quote div {
+
     width: 100%;
-    max-width: 380px;
+    max-width: 440px;
 }
 
 span.primary {
     color: var(--color-primary);
+}
+
+p.centered {
+text-align: center;
 }
 
 /*logo,foto,icono*/
@@ -966,7 +971,7 @@ cursor: not-allowed;
 }
 
 .card.vertical.mini {
-    max-width: 220px;
+    max-width: 260px;
 }
 
 .card.vertical.auto .body {
