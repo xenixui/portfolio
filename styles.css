@@ -1279,7 +1279,7 @@ a.inline {
     align-items: center;
     padding: var(--padding-xs) var(--padding-s) var(--padding-xs) var(--padding-s);
     gap: var(--gap-xs);
-    border-radius: var(--border-radius-xs);
+    border-radius: var(--border-radius-s);
     border: solid var(--border-s);
 }
 
