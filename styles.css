@@ -774,11 +774,10 @@ textarea::placeholder {
 }
 
 .checkbox {
-    -moz-appearance: none;
     accent-color: var(--color-primary);
-    border-radius: var(--border-radius-m);
     width: 24px;
     height: 24px;
+    border-radius: var(--border-s);
     cursor: pointer;
 }
 
@@ -1352,8 +1351,8 @@ dialog::backdrop {
 }
 
 dialog.cookie {
-width: 400px;
-max-width: 80%;
+    width: 400px;
+    max-width: 80%;
 }
 
 .window {
@@ -1364,6 +1363,10 @@ max-width: 80%;
     backdrop-filter: blur(30px);
     inline-size: fit-content;
     block-size: fit-content;
+}
+.window.cookies {
+    width: 380px;
+    max-width: 80%;
 }
 
 .window .header {
