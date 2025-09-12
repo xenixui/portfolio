@@ -1342,6 +1342,7 @@ dialog {
     border: none;
     padding: var(--padding-none);
     background: transparent;
+    z-index: 999;
 }
 
 dialog::backdrop {
@@ -1356,6 +1357,10 @@ dialog::backdrop {
     backdrop-filter: blur(30px);
     inline-size: fit-content;
     block-size: fit-content;
+}
+.window.cookies {
+    width: 380px;
+    max-width: 80%;
 }
 
 .window .header {
