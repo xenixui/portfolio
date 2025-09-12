@@ -775,8 +775,8 @@ textarea::placeholder {
 
 .checkbox {
     -moz-appearance: none;
-    appearance: none;
     accent-color: var(--color-primary);
+    border-radius: var(--border-radius-m);
     width: 24px;
     height: 24px;
     cursor: pointer;
@@ -1351,6 +1351,11 @@ dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.4); 
 }
 
+dialog.cookie {
+width: 400px;
+max-width: 80%;
+}
+
 .window {
     display: flex;
     flex-direction: column;
@@ -1359,10 +1364,6 @@ dialog::backdrop {
     backdrop-filter: blur(30px);
     inline-size: fit-content;
     block-size: fit-content;
-}
-.window.cookies {
-    width: 380px;
-    max-width: 80%;
 }
 
 .window .header {
