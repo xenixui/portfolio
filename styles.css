@@ -35,6 +35,7 @@ body, html {
 #footer {
     display: flex;    
     justify-content: space-between;
+    align-items: center;
     flex-direction: row;
     padding: var(--padding-2xl);
     margin-top: var(--margin-4xl);
@@ -149,6 +150,7 @@ body, html {
 
 .section.content.full{
     height: 100vh ;
+    justify-content: start;
 }
 
 .section.content.about {
@@ -1363,6 +1365,19 @@ dialog::backdrop {
     align-items: center;
     padding: var(--padding-none) var(--padding-xl) var(--padding-xl) var(--padding-xl);
     gap: var(--gap-m);
+}
+
+.window .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: var(--padding-none) var(--padding-xl) var(--padding-xl) var(--padding-xl);
+    gap: var(--gap-m);
+}
+
+.window .footer .button {
+    width: 100%;
 }
 
 .body img {

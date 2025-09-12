@@ -29,6 +29,31 @@
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
     </head>
     <body>
+        <dialog id="cookies" id="cookie">
+            <div class="window">
+                <div class="header">
+                    <div class="title">
+                        <h4>Política de Cookies</h3>
+                        <button class="button base solid button icon" id="close_window_1">
+                            <span class="material-symbols-outlined">close</span>
+                        </button>
+                    </div>
+                </div>    
+                <div class="body">
+                    <p class="body large">
+                        Este sitio web utiliza cookies propias y de terceros para mejorar la experiencia del usuario y analizar el tráfico web. 
+                    </p>
+                </div>
+                <div class="footer">
+                    <button class="button base solid" id="reject">
+                        <span>Rechazar</span>
+                    </button>
+                    <button class="button primary solid" id="accept">
+                        <span>Aceptar</span>
+                    </button>
+                </div>
+            </div>
+        </dialog>
         <header id="header">
             <nav class="navigation">
                 <a href="index.html" class="a logo">
@@ -417,13 +442,46 @@
                     scrollContainer.scrollLeft = scrollLeft - walk;
                 });
                 </script>
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                    const banner = document.getElementById("cookie");
+                    const acceptBtn = document.getElementById("accept");
+                    const rejectBtn = document.getElementById("reject");
+
+                    // Mostrar banner solo si no hay decisión
+                    if (!localStorage.getItem("cookiesAccepted")) {
+                        banner.style.display = "flex";
+                    }
+
+                    acceptBtn.addEventListener("click", () => {
+                        localStorage.setItem("cookiesAccepted", "true");
+                        banner.style.display = "none";
+                        // Inicializa Google Analytics u otras cookies de análisis aquí
+                        console.log("Cookies aceptadas");
+                    });
+
+                    rejectBtn.addEventListener("click", () => {
+                        localStorage.setItem("cookiesAccepted", "false");
+                        banner.style.display = "none";
+                        // Bloquear cookies de terceros si fuera necesario
+                        console.log("Cookies rechazadas");
+                    });
+                    });
+                </script>
         </main>
         <footer id="footer">
             <span class="body large">© 2025 Ksenia Konnova · UX/UI Designer</span>
+            <nav class="navigation">
             <a href="legal.html">
-                <span class="material-symbols-outlined">info</span>
-                <span>Aviso de confidencialidad</span>
+                <span>Aviso legal</span>
             </a>
+            <a href="privacy.html">
+                <span>Política de privacidad</span>
+            </a>
+            <a href="cookies.html">
+                <span>Política de cookies</span>
+            </a>
+            </nav>
             <nav class="navigation">
                 <a href="https://www.linkedin.com/in/goldfisharts/" target="_blank" class="button base solid button icon">
                     <img src="svg/in.svg" alt="Icono LinkedIn">
