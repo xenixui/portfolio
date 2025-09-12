@@ -760,6 +760,26 @@ textarea::placeholder {
     color: var(--color-on-surface-dark);
 }
 
+.checkbox_wrapper {
+    display: inline-flex;
+  justify-content: start;
+  align-items: center;
+  gap: var(--gap-m);
+  white-space: nowrap;
+  width: 100%;
+}
+
+.checkbox_wrapper .label {
+   width: auto;
+}
+
+.checkbox {
+    accent-color: var(--color-primary);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
 
 /*form*/
 

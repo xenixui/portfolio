@@ -155,11 +155,20 @@
                                 </label>
                                 <textarea name="message" id="message" placeholder="Mensaje" class="input text area"></textarea>
                             </div>
+                            <div class="checkbox_wrapper">
+                                <input type="checkbox" id="checkbox_privacy" class="checkbox" required>
+                                <label for="checkbox_privacy" class="label">
+                                    <span class="body large">He leído y acepto la </span>
+                                </label>
+                                <a href="privacy.html" class="a inline" target="_blank">
+                                        Política de privacidad
+                                </a>
+                            </div>
                             <button type="submit" id="submit_btn" class="button primary solid">
                                 <span class="material-symbols-outlined">send</span>
                                 <span>Enviar</span>
                             </button>
-                            </form>
+                        </form>
                         <div class="content horizontal gap-xl centered">
                             <hr>
                             <span class="body large">ó</span>
@@ -187,10 +196,10 @@
                                 </div>
                         </a>
                         <a href="mailto:kseniakonnova.ux@gmail.com" class="card horizontal stats" target="_blank">
-                                <img src="svg/cards_mail.svg" alt="Icono email">
-                                <div class="card body">
-                                    <span class="body large">Enviar email</span>
-                                </div>
+                            <img src="svg/cards_mail.svg" alt="Icono email">
+                            <div class="card body">
+                                <span class="body large">Enviar email</span>
+                            </div>
                         </a>
                     </div>    
                 </section>
@@ -283,41 +292,55 @@
             }
             });  
         </script>
-        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
         <script type="text/javascript">
-        emailjs.init("gh97sn76WV8g8oZRE");
+            document.addEventListener('DOMContentLoaded', () => {
+            if (typeof emailjs !== 'undefined' && emailjs.init) {
+                emailjs.init("gh97sn76WV8g8oZRE");
+            }
 
-        const form = document.getElementById('contact_form');
-        const submitBtn = document.getElementById('submit_btn');
+            const form = document.getElementById('contact_form');
+            const submitBtn = document.getElementById('submit_btn');
+            const privacyCheckbox = document.getElementById('checkbox_privacy');
 
-        function checkFormValidity() {
-        const inputs = form.querySelectorAll('input[required], textarea[required]');
-        let allFilled = true;
+            submitBtn.disabled = true;
 
-        inputs.forEach(input => {
-        if (!input.value.trim()) {
-            allFilled = false;
-        }
-        });
+            function checkFormValidity() {
+                const requiredFields = form.querySelectorAll('input[required], textarea[required]');
+                let allValid = true;
 
-        submitBtn.disabled = !allFilled;
-        }
+            requiredFields.forEach(field => {
+            if (field.type === 'checkbox') {
+                if (!field.checked) allValid = false;
+            } else {
+                if (!field.value.trim() || !field.checkValidity()) {
+                allValid = false;
+                }
+            }
+            });
+
+            submitBtn.disabled = !allValid;
+            }
 
         form.addEventListener('input', checkFormValidity);
+        form.addEventListener('change', checkFormValidity);
+
         checkFormValidity();
 
         form.addEventListener('submit', function(event) {
-        event.preventDefault();
+            event.preventDefault();
+            if (submitBtn.disabled) return;
 
-        emailjs.sendForm('service_x570bjs', 'template_portfolio', this)
-        .then(function() {
-            alert('Mensaje enviado con éxito!');
-            form.reset();
-            checkFormValidity();
-        }, function(error) {
-        alert('Se ha producido un error: ' + JSON.stringify(error));
-        });
-        });
+            emailjs.sendForm('service_x570bjs', 'template_portfolio', this)
+            .then(() => {
+                alert('¡Mensaje enviado con éxito!');
+                form.reset();
+                checkFormValidity();
+            })
+            .catch(error => {
+                alert('Se ha producido un error: ' + JSON.stringify(error));
+            });
+            });
+            });
         </script>
     </body>
 </html>
