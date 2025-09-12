@@ -293,7 +293,7 @@
             });  
         </script>
         <script type="text/javascript">
-            document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
             if (typeof emailjs !== 'undefined' && emailjs.init) {
                 emailjs.init("gh97sn76WV8g8oZRE");
             }
@@ -308,39 +308,38 @@
                 const requiredFields = form.querySelectorAll('input[required], textarea[required]');
                 let allValid = true;
 
-            requiredFields.forEach(field => {
-            if (field.type === 'checkbox') {
-                if (!field.checked) allValid = false;
-            } else {
-                if (!field.value.trim() || !field.checkValidity()) {
-                allValid = false;
-                }
-            }
-            });
+                requiredFields.forEach(field => {
+                    if (field.type === 'checkbox') {
+                        if (!field.checked) allValid = false;
+                    } else if (!field.value.trim() || !field.checkValidity()) {
+                        allValid = false;
+                    }
+                });
 
-            submitBtn.disabled = !allValid;
+                submitBtn.disabled = !allValid;
             }
 
-        form.addEventListener('input', checkFormValidity);
-        form.addEventListener('change', checkFormValidity);
+            form.addEventListener('input', checkFormValidity);
+            form.addEventListener('change', checkFormValidity);
 
-        checkFormValidity();
+            checkFormValidity();
 
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            if (submitBtn.disabled) return;
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
 
-            emailjs.sendForm('service_x570bjs', 'template_portfolio', this)
-            .then(() => {
-                alert('¡Mensaje enviado con éxito!');
-                form.reset();
-                checkFormValidity();
-            })
-            .catch(error => {
-                alert('Se ha producido un error: ' + JSON.stringify(error));
+                if (submitBtn.disabled) return;
+
+                emailjs.sendForm('service_x570bjs', 'template_portfolio', this)
+                .then(() => {
+                    alert('¡Mensaje enviado con éxito!');
+                    form.reset();
+                    checkFormValidity();
+                })
+                .catch(error => {
+                    alert('Se ha producido un error: ' + JSON.stringify(error));
+                });
             });
-            });
-            });
-        </script>
+        });
+</script>
     </body>
 </html>
