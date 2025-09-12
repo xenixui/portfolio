@@ -774,7 +774,11 @@ textarea::placeholder {
 }
 
 .checkbox {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
     accent-color: var(--color-primary);
+    border: solid var(--color-primary);
     width: 24px;
     height: 24px;
     cursor: pointer;
