@@ -1421,6 +1421,7 @@ dialog.cookie {
 
 .body p {
     margin: var(--margin-none);
+    padding: var(--padding-none);
 }
 
 /*divisores*/
