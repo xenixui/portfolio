@@ -1338,7 +1338,7 @@ a.inline {
 
 dialog {
     position: fixed;
-    inset: 50% auto auto 50%; /* equivalente a top/left 50% */
+    inset: 50% auto auto 50%; 
     transform: translate(-50%, -50%);
     border: none;
     padding: var(--padding-none);
@@ -1352,7 +1352,7 @@ dialog::backdrop {
 
 dialog.cookie {
     width: 400px;
-    max-width: 80%;
+    max-width: 88%;
 }
 
 .window {
@@ -1392,7 +1392,7 @@ dialog.cookie {
 .window .body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     padding: var(--padding-none) var(--padding-xl) var(--padding-xl) var(--padding-xl);
     gap: var(--gap-m);
