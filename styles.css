@@ -1395,7 +1395,7 @@ dialog.cookie {
     justify-content: center;
     align-items: start;
     padding: var(--padding-none) var(--padding-xl) var(--padding-xl) var(--padding-xl);
-    gap: var(--gap-m);
+    gap: var(--gap-xl);
 }
 
 .window .footer {
@@ -1419,7 +1419,9 @@ dialog.cookie {
     display: block;
 }
 
-
+.body p {
+    margin: var(--margin-none);
+}
 
 /*divisores*/
 hr {
