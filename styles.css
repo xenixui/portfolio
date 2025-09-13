@@ -1419,7 +1419,7 @@ dialog.cookie {
     display: block;
 }
 
-.body p {
+.window .body p {
     margin: var(--margin-none);
     padding: var(--padding-none);
 }
