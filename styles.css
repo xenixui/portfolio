@@ -1392,8 +1392,8 @@ dialog.cookie {
 .window .body {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: center;
+    justify-content: center;
+    align-items: start;
     padding: var(--padding-none) var(--padding-xl) var(--padding-xl) var(--padding-xl);
     gap: var(--gap-m);
 }
