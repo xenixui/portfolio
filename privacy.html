@@ -122,104 +122,102 @@
             </nav>
         </header>
         <main id="main">
-            <div class="section content">
-                <section class ="section content">
-                    <div class="info full">
-                        <h1>Política de privacidad</h1>
-                            <p class="body large">
-                                En cumplimiento del Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica de Protección de Datos y Garantía de los Derechos Digitales (LOPDGDD), se informa a los usuarios:
-                            </p>     
-                            <ul class="body large">
-                                <li><strong>Responsable:</strong> Ksenia Konnova (persona física).
-                                </li>
-                                <li><strong>Contacto:</strong>
-                                    <a href="mailto:kseniakonnova.ux@gmail.com" class="a inline" target="_blank">
-                                        kseniakonnova.ux@gmail.com
-                                    </a>
-                                </li>
-                                <li><strong>Finalidad de tratamiento:</strong> los datos personales facilitados a través del formulario de contacto (nombre, correo electrónico, mensaje) se utilizan exclusivamente para responder consultas o solicitudes de información.
-                                </li>
-                                <li><strong>Legitimación:</strong> consentimiento explícito del interesado al enviar el formulario.
-                                </li>
-                                <li><strong>Destinatarios:</strong> EmailJS, proveedor del servicio de envío de formularios. 
-                                    Sus condiciones de privacidad están disponibles en 
-                                    <a href="https://www.emailjs.com/legal/privacy-policy/" class="a inline" target="_blank">
-                                        https://www.emailjs.com/legal/privacy-policy
-                                    </a>
-                                </li>
-                                <li><strong>Derechos del usuario:</strong> puede acceder, rectificar, cancelar u oponerse al tratamiento de sus datos escribiendo a 
-                                    <a href="mailto:kseniakonnova.ux@gmail.com" class="a inline" target="_blank">
-                                        kseniakonnova.ux@gmail.com
-                                    </a>
-                                </li> 
-                                <li><strong>Conservación: </strong> los datos se conservan únicamente mientras sea necesario para responder la consulta y no se comparten con terceros distintos a EmailJS.
-                                </li>   
-                            </ul>
-                        </span>
-                    </div> 
-                </section>
-            </div>                      
-                <script><!-- Lottie hover -->
-                    document.addEventListener("DOMContentLoaded", () => {
-                    const lottieEl = document.getElementById("section_animation");
-                    lottieEl.addEventListener("mouseenter", () => {
-                    lottieEl.play();
-                    });
-                    
-                    lottieEl.addEventListener("mouseleave", () => {
-                    lottieEl.stop();
-                    });
-                    });
-                </script>
-                <script><!-- Slider -->
-                    const scrollContainer = document.querySelector('.content.horizontal.gap-2xl.scroll');
-                    const btnLeft = document.getElementById('scroll_left');
-                    const btnRight = document.getElementById('scroll_right');
-                    const scrollStep = 140;
-
-                btnLeft.addEventListener('click', () => {
-                    scrollContainer.scrollBy({
-                        left: -scrollStep,
-                        behavior: 'smooth'
-                    });
+            <section class ="section content">
+                <div class="info full">
+                    <h1>Política de privacidad</h1>
+                        <p class="body large">
+                            En cumplimiento del Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica de Protección de Datos y Garantía de los Derechos Digitales (LOPDGDD), se informa a los usuarios:
+                        </p>     
+                        <ul class="body large">
+                            <li><strong>Responsable:</strong> Ksenia Konnova (persona física).
+                            </li>
+                            <li><strong>Contacto:</strong>
+                                <a href="mailto:kseniakonnova.ux@gmail.com" class="a inline" target="_blank">
+                                    kseniakonnova.ux@gmail.com
+                                </a>
+                            </li>
+                            <li><strong>Finalidad de tratamiento:</strong> los datos personales facilitados a través del formulario de contacto (nombre, correo electrónico, mensaje) se utilizan exclusivamente para responder consultas o solicitudes de información.
+                            </li>
+                            <li><strong>Legitimación:</strong> consentimiento explícito del interesado al enviar el formulario.
+                            </li>
+                            <li><strong>Destinatarios:</strong> EmailJS, proveedor del servicio de envío de formularios. 
+                                Sus condiciones de privacidad están disponibles en 
+                                <a href="https://www.emailjs.com/legal/privacy-policy/" class="a inline" target="_blank">
+                                    https://www.emailjs.com/legal/privacy-policy
+                                </a>
+                            </li>
+                            <li><strong>Derechos del usuario:</strong> puede acceder, rectificar, cancelar u oponerse al tratamiento de sus datos escribiendo a 
+                                <a href="mailto:kseniakonnova.ux@gmail.com" class="a inline" target="_blank">
+                                    kseniakonnova.ux@gmail.com
+                                </a>
+                            </li> 
+                            <li><strong>Conservación: </strong> los datos se conservan únicamente mientras sea necesario para responder la consulta y no se comparten con terceros distintos a EmailJS.
+                            </li>   
+                        </ul>
+                    </span>
+                </div> 
+            </section>                     
+            <script><!-- Lottie hover -->
+                document.addEventListener("DOMContentLoaded", () => {
+                const lottieEl = document.getElementById("section_animation");
+                lottieEl.addEventListener("mouseenter", () => {
+                lottieEl.play();
                 });
-
-                btnRight.addEventListener('click', () => {
-                    scrollContainer.scrollBy({
-                        left: scrollStep,
-                        behavior: 'smooth'
-                    });
+                
+                lottieEl.addEventListener("mouseleave", () => {
+                lottieEl.stop();
                 });
-
-                let isDragging = false;
-                let startX;
-                let scrollLeft;
-
-                scrollContainer.addEventListener('mousedown', (e) => {
-                    isDragging = true;
-                    startX = e.pageX - scrollContainer.offsetLeft;
-                    scrollLeft = scrollContainer.scrollLeft;
-                    scrollContainer.style.cursor = 'grabbing';
                 });
+            </script>
+            <script><!-- Slider -->
+                const scrollContainer = document.querySelector('.content.horizontal.gap-2xl.scroll');
+                const btnLeft = document.getElementById('scroll_left');
+                const btnRight = document.getElementById('scroll_right');
+                const scrollStep = 140;
 
-                scrollContainer.addEventListener('mouseleave', () => {
-                    isDragging = false;
-                    scrollContainer.style.cursor = 'grab';
+            btnLeft.addEventListener('click', () => {
+                scrollContainer.scrollBy({
+                    left: -scrollStep,
+                    behavior: 'smooth'
                 });
+            });
 
-                scrollContainer.addEventListener('mouseup', () => {
-                    isDragging = false;
-                    scrollContainer.style.cursor = 'grab';
+            btnRight.addEventListener('click', () => {
+                scrollContainer.scrollBy({
+                    left: scrollStep,
+                    behavior: 'smooth'
                 });
+            });
 
-                scrollContainer.addEventListener('mousemove', (e) => {
-                    if(!isDragging) return;
-                    e.preventDefault();
-                    const x = e.pageX - scrollContainer.offsetLeft;
-                    const walk = (x - startX) * 1.5; // velocidad del drag
-                    scrollContainer.scrollLeft = scrollLeft - walk;
-                });
-                </script>
+            let isDragging = false;
+            let startX;
+            let scrollLeft;
+
+            scrollContainer.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startX = e.pageX - scrollContainer.offsetLeft;
+                scrollLeft = scrollContainer.scrollLeft;
+                scrollContainer.style.cursor = 'grabbing';
+            });
+
+            scrollContainer.addEventListener('mouseleave', () => {
+                isDragging = false;
+                scrollContainer.style.cursor = 'grab';
+            });
+
+            scrollContainer.addEventListener('mouseup', () => {
+                isDragging = false;
+                scrollContainer.style.cursor = 'grab';
+            });
+
+            scrollContainer.addEventListener('mousemove', (e) => {
+                if(!isDragging) return;
+                e.preventDefault();
+                const x = e.pageX - scrollContainer.offsetLeft;
+                const walk = (x - startX) * 1.5; // velocidad del drag
+                scrollContainer.scrollLeft = scrollLeft - walk;
+            });
+            </script>
         </main>
         <footer id="footer">
             <span class="body large">© 2025 Ksenia Konnova · UX/UI Designer</span>

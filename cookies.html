@@ -122,92 +122,90 @@
             </nav>
         </header>
         <main id="main">
-            <div class="section content">
-                <section class ="section content">
-                    <div class="info full">
-                        <h1>Política de Cookies</h1>
-                            <p class="body large">
-                                Este sitio web utiliza cookies propias y de terceros para mejorar la experiencia del usuario y analizar el tráfico web.
-                            </p>     
-                            <ul class="body large">
-                                <li><strong>Cookies técnicas y funcionales:</strong> necesarias para el correcto funcionamiento del sitio.
-                                </li>
-                                <li><strong>Cookies de análisis:</strong> Google Analytics se utiliza para generar estadísticas sobre la navegación. Los datos recogidos son anónimos y se gestionan de acuerdo con la política de privacidad de Google
-                                    <a href="https://policies.google.com/privacy" class="a inline" target="_blank">
-                                        https://policies.google.com/privacy
-                                    </a>
-                            </ul>
-                            <p class="body large">
-                                El usuario puede configurar su navegador para bloquear o alertar sobre la instalación de cookies, aunque algunas funcionalidades del sitio podrían verse limitadas.
-                            </p>
-                            <p class="body large">
-                                Al continuar navegando en este sitio, el usuario acepta el uso de cookies.
-                            </p>
-                        </span>
-                    </div> 
-                </section>
-            </div>                      
-                <script><!-- Lottie hover -->
-                    document.addEventListener("DOMContentLoaded", () => {
-                    const lottieEl = document.getElementById("section_animation");
-                    lottieEl.addEventListener("mouseenter", () => {
-                    lottieEl.play();
-                    });
-                    
-                    lottieEl.addEventListener("mouseleave", () => {
-                    lottieEl.stop();
-                    });
-                    });
-                </script>
-                <script><!-- Slider -->
-                    const scrollContainer = document.querySelector('.content.horizontal.gap-2xl.scroll');
-                    const btnLeft = document.getElementById('scroll_left');
-                    const btnRight = document.getElementById('scroll_right');
-                    const scrollStep = 140;
-
-                btnLeft.addEventListener('click', () => {
-                    scrollContainer.scrollBy({
-                        left: -scrollStep,
-                        behavior: 'smooth'
-                    });
+            <section class ="section content">
+                <div class="info full">
+                    <h1>Política de Cookies</h1>
+                        <p class="body large">
+                            Este sitio web utiliza cookies propias y de terceros para mejorar la experiencia del usuario y analizar el tráfico web.
+                        </p>     
+                        <ul class="body large">
+                            <li><strong>Cookies técnicas y funcionales:</strong> necesarias para el correcto funcionamiento del sitio.
+                            </li>
+                            <li><strong>Cookies de análisis:</strong> Google Analytics se utiliza para generar estadísticas sobre la navegación. Los datos recogidos son anónimos y se gestionan de acuerdo con la política de privacidad de Google
+                                <a href="https://policies.google.com/privacy" class="a inline" target="_blank">
+                                    https://policies.google.com/privacy
+                                </a>
+                        </ul>
+                        <p class="body large">
+                            El usuario puede configurar su navegador para bloquear o alertar sobre la instalación de cookies, aunque algunas funcionalidades del sitio podrían verse limitadas.
+                        </p>
+                        <p class="body large">
+                            Al continuar navegando en este sitio, el usuario acepta el uso de cookies.
+                        </p>
+                    </span>
+                </div> 
+            </section>                   
+            <script><!-- Lottie hover -->
+                document.addEventListener("DOMContentLoaded", () => {
+                const lottieEl = document.getElementById("section_animation");
+                lottieEl.addEventListener("mouseenter", () => {
+                lottieEl.play();
                 });
-
-                btnRight.addEventListener('click', () => {
-                    scrollContainer.scrollBy({
-                        left: scrollStep,
-                        behavior: 'smooth'
-                    });
+                
+                lottieEl.addEventListener("mouseleave", () => {
+                lottieEl.stop();
                 });
-
-                let isDragging = false;
-                let startX;
-                let scrollLeft;
-
-                scrollContainer.addEventListener('mousedown', (e) => {
-                    isDragging = true;
-                    startX = e.pageX - scrollContainer.offsetLeft;
-                    scrollLeft = scrollContainer.scrollLeft;
-                    scrollContainer.style.cursor = 'grabbing';
                 });
+            </script>
+            <script><!-- Slider -->
+                const scrollContainer = document.querySelector('.content.horizontal.gap-2xl.scroll');
+                const btnLeft = document.getElementById('scroll_left');
+                const btnRight = document.getElementById('scroll_right');
+                const scrollStep = 140;
 
-                scrollContainer.addEventListener('mouseleave', () => {
-                    isDragging = false;
-                    scrollContainer.style.cursor = 'grab';
+            btnLeft.addEventListener('click', () => {
+                scrollContainer.scrollBy({
+                    left: -scrollStep,
+                    behavior: 'smooth'
                 });
+            });
 
-                scrollContainer.addEventListener('mouseup', () => {
-                    isDragging = false;
-                    scrollContainer.style.cursor = 'grab';
+            btnRight.addEventListener('click', () => {
+                scrollContainer.scrollBy({
+                    left: scrollStep,
+                    behavior: 'smooth'
                 });
+            });
 
-                scrollContainer.addEventListener('mousemove', (e) => {
-                    if(!isDragging) return;
-                    e.preventDefault();
-                    const x = e.pageX - scrollContainer.offsetLeft;
-                    const walk = (x - startX) * 1.5; // velocidad del drag
-                    scrollContainer.scrollLeft = scrollLeft - walk;
-                });
-                </script>
+            let isDragging = false;
+            let startX;
+            let scrollLeft;
+
+            scrollContainer.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startX = e.pageX - scrollContainer.offsetLeft;
+                scrollLeft = scrollContainer.scrollLeft;
+                scrollContainer.style.cursor = 'grabbing';
+            });
+
+            scrollContainer.addEventListener('mouseleave', () => {
+                isDragging = false;
+                scrollContainer.style.cursor = 'grab';
+            });
+
+            scrollContainer.addEventListener('mouseup', () => {
+                isDragging = false;
+                scrollContainer.style.cursor = 'grab';
+            });
+
+            scrollContainer.addEventListener('mousemove', (e) => {
+                if(!isDragging) return;
+                e.preventDefault();
+                const x = e.pageX - scrollContainer.offsetLeft;
+                const walk = (x - startX) * 1.5; // velocidad del drag
+                scrollContainer.scrollLeft = scrollLeft - walk;
+            });
+            </script>
         </main>
         <footer id="footer">
             <span class="body large">© 2025 Ksenia Konnova · UX/UI Designer</span>

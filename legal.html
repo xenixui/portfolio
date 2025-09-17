@@ -122,92 +122,90 @@
             </nav>
         </header>
         <main id="main">
-            <div class="section content">
-                <section class ="section content">
-                    <div class="info full">
-                        <h1>Aviso legal</h1>
-                            <p class="body large">
-                                El presente sitio web es propiedad de Ksenia Konnova, persona física, con correo de contacto:
-                                <a href="mailto:kseniakonnova.ux@gmail.com" class="a inline" target="_blank">
-                                kseniakonnova.ux@gmail.com
-                                </a>
-                            </p>     
-                            <p class="body large">
-                                El acceso y uso de este sitio web implica la aceptación de las presentes condiciones. 
-                                Todos los contenidos publicados (textos, imágenes, diseños y proyectos) son propiedad de Ksenia Konnova, salvo que se indique lo contrario, y queda prohibida su reproducción, distribución o modificación sin autorización previa.
-                            </p>    
-                            <p class="body large">
-                                Los enlaces a sitios externos tienen fines informativos; Ksenia Konnova no se hace responsable de los contenidos de dichas páginas.
-                            </p>
-                            <p class="body large">
-                                Algunos proyectos han sido modificados para proteger la identidad de los clientes. 
-                                Esto puede incluir el uso de nombres genéricos, la sustitución de marcas y logotipos por versiones ficticias, o la alteración de información sensible.
-                            </p>
-                        </span>
-                    </div> 
-                </section>
-            </div>                      
-                <script><!-- Lottie hover -->
-                    document.addEventListener("DOMContentLoaded", () => {
-                    const lottieEl = document.getElementById("section_animation");
-                    lottieEl.addEventListener("mouseenter", () => {
-                    lottieEl.play();
-                    });
-                    
-                    lottieEl.addEventListener("mouseleave", () => {
-                    lottieEl.stop();
-                    });
-                    });
-                </script>
-                <script><!-- Slider -->
-                    const scrollContainer = document.querySelector('.content.horizontal.gap-2xl.scroll');
-                    const btnLeft = document.getElementById('scroll_left');
-                    const btnRight = document.getElementById('scroll_right');
-                    const scrollStep = 140;
-
-                btnLeft.addEventListener('click', () => {
-                    scrollContainer.scrollBy({
-                        left: -scrollStep,
-                        behavior: 'smooth'
-                    });
+            <section class ="section content">
+                <div class="info full">
+                    <h1>Aviso legal</h1>
+                        <p class="body large">
+                            El presente sitio web es propiedad de Ksenia Konnova, persona física, con correo de contacto:
+                            <a href="mailto:kseniakonnova.ux@gmail.com" class="a inline" target="_blank">
+                            kseniakonnova.ux@gmail.com
+                            </a>
+                        </p>     
+                        <p class="body large">
+                            El acceso y uso de este sitio web implica la aceptación de las presentes condiciones. 
+                            Todos los contenidos publicados (textos, imágenes, diseños y proyectos) son propiedad de Ksenia Konnova, salvo que se indique lo contrario, y queda prohibida su reproducción, distribución o modificación sin autorización previa.
+                        </p>    
+                        <p class="body large">
+                            Los enlaces a sitios externos tienen fines informativos; Ksenia Konnova no se hace responsable de los contenidos de dichas páginas.
+                        </p>
+                        <p class="body large">
+                            Algunos proyectos han sido modificados para proteger la identidad de los clientes. 
+                            Esto puede incluir el uso de nombres genéricos, la sustitución de marcas y logotipos por versiones ficticias, o la alteración de información sensible.
+                        </p>
+                    </span>
+                </div> 
+            </section>                   
+            <script><!-- Lottie hover -->
+                document.addEventListener("DOMContentLoaded", () => {
+                const lottieEl = document.getElementById("section_animation");
+                lottieEl.addEventListener("mouseenter", () => {
+                lottieEl.play();
                 });
-
-                btnRight.addEventListener('click', () => {
-                    scrollContainer.scrollBy({
-                        left: scrollStep,
-                        behavior: 'smooth'
-                    });
+                
+                lottieEl.addEventListener("mouseleave", () => {
+                lottieEl.stop();
                 });
-
-                let isDragging = false;
-                let startX;
-                let scrollLeft;
-
-                scrollContainer.addEventListener('mousedown', (e) => {
-                    isDragging = true;
-                    startX = e.pageX - scrollContainer.offsetLeft;
-                    scrollLeft = scrollContainer.scrollLeft;
-                    scrollContainer.style.cursor = 'grabbing';
                 });
+            </script>
+            <script><!-- Slider -->
+                const scrollContainer = document.querySelector('.content.horizontal.gap-2xl.scroll');
+                const btnLeft = document.getElementById('scroll_left');
+                const btnRight = document.getElementById('scroll_right');
+                const scrollStep = 140;
 
-                scrollContainer.addEventListener('mouseleave', () => {
-                    isDragging = false;
-                    scrollContainer.style.cursor = 'grab';
+            btnLeft.addEventListener('click', () => {
+                scrollContainer.scrollBy({
+                    left: -scrollStep,
+                    behavior: 'smooth'
                 });
+            });
 
-                scrollContainer.addEventListener('mouseup', () => {
-                    isDragging = false;
-                    scrollContainer.style.cursor = 'grab';
+            btnRight.addEventListener('click', () => {
+                scrollContainer.scrollBy({
+                    left: scrollStep,
+                    behavior: 'smooth'
                 });
+            });
 
-                scrollContainer.addEventListener('mousemove', (e) => {
-                    if(!isDragging) return;
-                    e.preventDefault();
-                    const x = e.pageX - scrollContainer.offsetLeft;
-                    const walk = (x - startX) * 1.5; // velocidad del drag
-                    scrollContainer.scrollLeft = scrollLeft - walk;
-                });
-                </script>
+            let isDragging = false;
+            let startX;
+            let scrollLeft;
+
+            scrollContainer.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startX = e.pageX - scrollContainer.offsetLeft;
+                scrollLeft = scrollContainer.scrollLeft;
+                scrollContainer.style.cursor = 'grabbing';
+            });
+
+            scrollContainer.addEventListener('mouseleave', () => {
+                isDragging = false;
+                scrollContainer.style.cursor = 'grab';
+            });
+
+            scrollContainer.addEventListener('mouseup', () => {
+                isDragging = false;
+                scrollContainer.style.cursor = 'grab';
+            });
+
+            scrollContainer.addEventListener('mousemove', (e) => {
+                if(!isDragging) return;
+                e.preventDefault();
+                const x = e.pageX - scrollContainer.offsetLeft;
+                const walk = (x - startX) * 1.5; // velocidad del drag
+                scrollContainer.scrollLeft = scrollLeft - walk;
+            });
+            </script>
         </main>
         <footer id="footer">
             <span class="body large">© 2025 Ksenia Konnova · UX/UI Designer</span>
