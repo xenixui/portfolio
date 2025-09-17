@@ -16,6 +16,7 @@ body, html {
     background-size: cover;
     background-position: right top;
     scroll-behavior: smooth;
+    min-height: 100vh;
 }
 
 #header {
