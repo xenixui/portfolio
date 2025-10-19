@@ -42,7 +42,7 @@
     --color-error-subtle: hsla(354, 90%, 93%, 1);
     --color-error-subtle-hover: hsla(354, 90%, 95%, 1);
     --color-error-subtle-active: hsla(354, 90%, 91%, 1);
-    --color-on-error-subtle: hsla(354, 60%, 44%, 1);
+    --color-on-error-subtle: hsla(331, 76%, 12%, 1);
 
     /*warning*/
     --color-warning: hsla(28, 50%, 44%, 1);
@@ -52,7 +52,7 @@
     --color-warning-subtle: hsla(28, 70%, 95%, 1);
     --color-warning-subtle-hover: hsla(29, 70%, 92%, 1);
     --color-warning-subtle-active: hsla(28, 70%, 89%, 1);
-    --color-on-warning-subtle: hsla(28, 50%, 41%, 1);
+    --color-on-warning-subtle: hsla(28, 61%, 11%, 1);
 
     /*success*/
     --color-sucess: hsla(87, 50%, 45%, 1);
@@ -62,7 +62,7 @@
     --color-sucess-subtle: hsla(87, 55%, 94%, 1);
     --color-sucess-subtle-hover: hsla(87, 55%, 91%, 1);
     --color-sucess-subtle-active: hsla(87, 55%, 88%, 1);
-    --color-on-sucess-subtle: hsla(87, 45%, 34%, 1);
+    --color-on-sucess-subtle: hsla(86, 41%, 10%, 1);
 
     /*base*/
     --color-base: hsla(0, 0%, 100%, 1);
