@@ -157,70 +157,10 @@
                     </span>
                 </div> 
             </section>                     
-            <script><!-- Lottie hover -->
-                document.addEventListener("DOMContentLoaded", () => {
-                const lottieEl = document.getElementById("section_animation");
-                lottieEl.addEventListener("mouseenter", () => {
-                lottieEl.play();
-                });
-                
-                lottieEl.addEventListener("mouseleave", () => {
-                lottieEl.stop();
-                });
-                });
-            </script>
-            <script><!-- Slider -->
-                const scrollContainer = document.querySelector('.content.horizontal.gap-2xl.scroll');
-                const btnLeft = document.getElementById('scroll_left');
-                const btnRight = document.getElementById('scroll_right');
-                const scrollStep = 140;
-
-            btnLeft.addEventListener('click', () => {
-                scrollContainer.scrollBy({
-                    left: -scrollStep,
-                    behavior: 'smooth'
-                });
-            });
-
-            btnRight.addEventListener('click', () => {
-                scrollContainer.scrollBy({
-                    left: scrollStep,
-                    behavior: 'smooth'
-                });
-            });
-
-            let isDragging = false;
-            let startX;
-            let scrollLeft;
-
-            scrollContainer.addEventListener('mousedown', (e) => {
-                isDragging = true;
-                startX = e.pageX - scrollContainer.offsetLeft;
-                scrollLeft = scrollContainer.scrollLeft;
-                scrollContainer.style.cursor = 'grabbing';
-            });
-
-            scrollContainer.addEventListener('mouseleave', () => {
-                isDragging = false;
-                scrollContainer.style.cursor = 'grab';
-            });
-
-            scrollContainer.addEventListener('mouseup', () => {
-                isDragging = false;
-                scrollContainer.style.cursor = 'grab';
-            });
-
-            scrollContainer.addEventListener('mousemove', (e) => {
-                if(!isDragging) return;
-                e.preventDefault();
-                const x = e.pageX - scrollContainer.offsetLeft;
-                const walk = (x - startX) * 1.5; // velocidad del drag
-                scrollContainer.scrollLeft = scrollLeft - walk;
-            });
-            </script>
+            
         </main>
         <footer id="footer">
-            <span class="body large">© 2025 Ksenia Konnova · UX/UI Designer</span>
+            <span class="body large">© 2026 Ksenia Konnova · UX/UI Designer</span>
             <nav class="navigation">
             <a href="legal.html" class="a inline">
                 <span>Aviso legal</span>

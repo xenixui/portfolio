@@ -764,15 +764,15 @@ textarea::placeholder {
 
 .checkbox_wrapper {
     display: inline-flex;
-  justify-content: start;
-  align-items: center;
-  gap: var(--gap-m);
-  white-space: nowrap;
-  width: 100%;
+    justify-content: start;
+    align-items: center;
+    gap: var(--gap-m);
+    white-space: nowrap;
+    width: 100%;
 }
 
 .checkbox_wrapper .label {
-   width: auto;
+    width: auto;
 }
 
 .checkbox {
@@ -1294,6 +1294,9 @@ a.inline {
     width: 100%;
 }
 
+#footer a.active:hover {
+    background: none;
+}
 
 /*chip*/
 
